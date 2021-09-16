@@ -4,22 +4,21 @@ Python code which uses backtracking to assign subjects to timeslots under certai
 
 
 ## Problem description
-Subjects are either compulsory or optional. 
-Each subject has a set of associated time slots that it may be scheduled in.
-A certain number of rooms are available for teaching. 
-A single subject is taught in a single timeslot and room.
+Each subject is either compulsory or optional, and has a set of associated time slots that it may be scheduled in. A certain set of rooms are available for teaching. A single subject is taught in a single timeslot and room.
 
 
-Two compulsory subjects cannot share the same timeslot
-Subjects can share a timeslot (if at most one of them is compulsory) but not a room.
+* Two compulsory subjects cannot share the same timeslot.
+
+* Subjects can share a timeslot (if at most one of them is compulsory) but not a room.
+
 
 This problem can be modeled as a constraint satisfaction problem, with the two constraints given above.
 
 
-Input - 
+**Input** - 
 A CSV file which provides the subject and room names, and for each subject, its compulsory/optional status and possible timeslots. Sample inputs are provided.
 
-Output - 
+**Output** - 
 Prints the subject-timeslot-room mapping to the console. Also writes a CSV file to the location provided, showing each subject with its timeslot and room as scheduled by the algorithm.
 If the problem is such that no solution can be found, prints a message to that effect. 
 
